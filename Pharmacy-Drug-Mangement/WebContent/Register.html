@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/Register.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section: Image or Welcome Text -->
+        <div class="left-section">
+            <h1>Welcome!</h1>
+            <p>Join us today to experience the best we have to offer.</p>
+            <img src="../images/register-illustration.png" alt="Registration Illustration">
+        </div>
+
+        <!-- Right Section: Registration Form -->
+        <div class="right-section">
+            <form action="Register.jsp" method="post" class="register-form">
+                <h2>Register New Customer</h2>
+                <div class="form-group">
+                    <input type="text" name="fname" placeholder="First Name" required>
+                    <input type="text" name="lname" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email ID" required>
+                    <input type="text" name="phno" placeholder="Phone Number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="address" placeholder="Address" required>
+                    <input type="text" name="uid" placeholder="Customer ID" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="pass1" placeholder="Password" required>
+                    <input type="password" name="pass2" placeholder="Confirm Password" required>
+                </div>
+                <input type="submit" value="Register">
+                <p>Already have an account? <a href="Login.html" class="login-link">Login</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

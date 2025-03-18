@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/Login.css">
+</head>
+<body>
+    <div class="container">
+        <form action="Login.jsp" method="post" class="loginbox">
+            <h2>Login to Your Account</h2>
+            <div class="customselect">
+                <select name="utype" required>
+                    <option value="" disabled selected>Select Account Type</option>
+                    <option value="1">Customer</option>
+                    <option value="2">Seller</option>
+                </select>
+            </div>
+            <input type="text" name="userid" placeholder="Enter User ID" required>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            <input type="submit" value="Login">
+            <p class="register-link">
+                Don't have an account? <a href="Index.html">Register here</a>.
+            </p>
+        </form>
+    </div>
+</body>
+</html>

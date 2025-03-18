@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="css/admin-style.css">
+</head>
+<body>
+    <div class="main">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Pharmacy Admin</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="SellerHomepage.jsp" class="nav-link">HOME</a></li>
+                <li class="nav-item"><a href="AddProduct.jsp" class="nav-link active">ADD</a></li>
+                <li class="nav-item"><a href="AddInventory.jsp" class="nav-link">RESTOCK</a></li>
+                <li class="nav-item"><a href="SellerOrders.jsp" class="nav-link">ORDERS</a></li>
+            </ul>
+        </aside>
+        <div class="content-area">
+            <div class="top-bar">
+                <h1 class="page-title">Add Product</h1>
+                <div class="user-info">
+                    <a href="Logout.jsp" class="logout-btn">Logout</a>
+                </div>
+            </div>
+            <div class="card">
+                <h2 class="card-title">New Product Information</h2>
+              <form action="AddProduct.jsp" method="post">
+                    <label for="pid" class="form-label">Product ID:</label>
+                    <input type="text" id="pid" name="pid" class="form-input" required>
+
+                    <label for="pname" class="form-label">Product Name:</label>
+                    <input type="text" id="pname" name="pname" class="form-input" required>
+
+                    <label for="manufacturer" class="form-label">Manufacturer:</label>
+                    <input type="text" id="manufacturer" name="manufacturer" class="form-input" required>
+
+                    <label for="mfg" class="form-label">Manufacturing Date:</label>
+<input type="text" name="mfg" placeholder="Enter Manufacturing Date"><br>
+
+<label for="exp" class="form-label">Expiry Date:</label>
+ <input type="text" name="exp" placeholder="Enter Expiry Date"><br>
+
+                    <label for="price" class="form-label">Price:</label>
+                    <input type="number" id="price" name="price" class="form-input" required>
+
+                    <label for="quantity" class="form-label">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" class="form-input" required>
+
+                    <label for="image" class="form-label">Product Image:</label>
+                    <input type="file" class="img" name="image"><br>
+                    <textarea name="hidimg" id="hidinp" hidden></textarea><br><br>
+    <input type="submit" value="Add Product" class="btn">
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        var btn=document.querySelector('.btn')
+        var img=document.querySelector('.img');
+        
+        var dt=document.getElementById('hidinp');
+        img.addEventListener('change',()=>{
+        dt.innerText=`uploads/${img.files[0].name}`;
+        console.log(dt)
+        })
+        
+   
+    </script>
+</body>
+</html>
